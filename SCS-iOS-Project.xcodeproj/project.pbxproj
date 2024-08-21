@@ -27,6 +27,13 @@
 		2DB331692C764BCE00EA1ECC /* SesionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB331682C764BCE00EA1ECC /* SesionManager.swift */; };
 		2DB3316D2C765A3C00EA1ECC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB3316C2C765A3C00EA1ECC /* MenuViewController.swift */; };
 		2DB3316F2C7691AD00EA1ECC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB3316E2C7691AD00EA1ECC /* LoginResponse.swift */; };
+		2DC03D542C769F6F00A3FB61 /* Reserva.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC03D532C769F6F00A3FB61 /* Reserva.storyboard */; };
+		2DC03D582C769FD200A3FB61 /* ReservaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D572C769FD200A3FB61 /* ReservaViewController.swift */; };
+		2DC03D5A2C769FDF00A3FB61 /* SedeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D592C769FDF00A3FB61 /* SedeViewController.swift */; };
+		2DC03D5C2C76A01D00A3FB61 /* CanchasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D5B2C76A01D00A3FB61 /* CanchasViewController.swift */; };
+		2DC03D5E2C76A07300A3FB61 /* SedeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D5D2C76A07300A3FB61 /* SedeTableViewCell.swift */; };
+		2DC03D602C76A08600A3FB61 /* CanchasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D5F2C76A08600A3FB61 /* CanchasTableViewCell.swift */; };
+		2DC03D622C76A0BB00A3FB61 /* ReservaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D612C76A0BB00A3FB61 /* ReservaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		2DB331682C764BCE00EA1ECC /* SesionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionManager.swift; sourceTree = "<group>"; };
 		2DB3316C2C765A3C00EA1ECC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2DB3316E2C7691AD00EA1ECC /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		2DC03D532C769F6F00A3FB61 /* Reserva.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reserva.storyboard; sourceTree = "<group>"; };
+		2DC03D572C769FD200A3FB61 /* ReservaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewController.swift; sourceTree = "<group>"; };
+		2DC03D592C769FDF00A3FB61 /* SedeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SedeViewController.swift; sourceTree = "<group>"; };
+		2DC03D5B2C76A01D00A3FB61 /* CanchasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchasViewController.swift; sourceTree = "<group>"; };
+		2DC03D5D2C76A07300A3FB61 /* SedeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SedeTableViewCell.swift; sourceTree = "<group>"; };
+		2DC03D5F2C76A08600A3FB61 /* CanchasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchasTableViewCell.swift; sourceTree = "<group>"; };
+		2DC03D612C76A0BB00A3FB61 /* ReservaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				2DB3314C2C745EB300EA1ECC /* Sede.storyboard */,
+				2DC03D592C769FDF00A3FB61 /* SedeViewController.swift */,
+				2DC03D5D2C76A07300A3FB61 /* SedeTableViewCell.swift */,
 			);
 			path = Sede;
 			sourceTree = "<group>";
@@ -122,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				2DB3314E2C75822900EA1ECC /* Canchas.storyboard */,
+				2DC03D5B2C76A01D00A3FB61 /* CanchasViewController.swift */,
+				2DC03D5F2C76A08600A3FB61 /* CanchasTableViewCell.swift */,
 			);
 			path = Canchas;
 			sourceTree = "<group>";
@@ -159,6 +177,9 @@
 		2DB331702C76989B00EA1ECC /* Reserva */ = {
 			isa = PBXGroup;
 			children = (
+				2DC03D532C769F6F00A3FB61 /* Reserva.storyboard */,
+				2DC03D572C769FD200A3FB61 /* ReservaViewController.swift */,
+				2DC03D612C76A0BB00A3FB61 /* ReservaTableViewCell.swift */,
 			);
 			path = Reserva;
 			sourceTree = "<group>";
@@ -235,6 +256,7 @@
 				2D68C2B82C69B8DC008CD29F /* Assets.xcassets in Resources */,
 				2D68C2B62C69B8DB008CD29F /* Main.storyboard in Resources */,
 				2DB3314B2C74535C00EA1ECC /* Menu.storyboard in Resources */,
+				2DC03D542C769F6F00A3FB61 /* Reserva.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +271,14 @@
 				2DB331592C763BDE00EA1ECC /* ErrorResponse.swift in Sources */,
 				2DB3316F2C7691AD00EA1ECC /* LoginResponse.swift in Sources */,
 				2D68C2B32C69B8DB008CD29F /* LoginViewController.swift in Sources */,
+				2DC03D5C2C76A01D00A3FB61 /* CanchasViewController.swift in Sources */,
 				2DB331642C763F3C00EA1ECC /* AuthService.swift in Sources */,
+				2DC03D5E2C76A07300A3FB61 /* SedeTableViewCell.swift in Sources */,
 				2DB3316D2C765A3C00EA1ECC /* MenuViewController.swift in Sources */,
+				2DC03D582C769FD200A3FB61 /* ReservaViewController.swift in Sources */,
+				2DC03D5A2C769FDF00A3FB61 /* SedeViewController.swift in Sources */,
+				2DC03D622C76A0BB00A3FB61 /* ReservaTableViewCell.swift in Sources */,
+				2DC03D602C76A08600A3FB61 /* CanchasTableViewCell.swift in Sources */,
 				2D68C2AF2C69B8DB008CD29F /* AppDelegate.swift in Sources */,
 				2DB331622C763E3A00EA1ECC /* NetworkManager.swift in Sources */,
 				2DB331692C764BCE00EA1ECC /* SesionManager.swift in Sources */,
