@@ -15,6 +15,7 @@
 		2D68C2BB2C69B8DC008CD29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D68C2B92C69B8DC008CD29F /* LaunchScreen.storyboard */; };
 		2DB3314B2C74535C00EA1ECC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3314A2C74535C00EA1ECC /* Menu.storyboard */; };
 		2DB3314D2C745EB300EA1ECC /* Sede.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3314C2C745EB300EA1ECC /* Sede.storyboard */; };
+		2DB3314F2C75822900EA1ECC /* Canchas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3314E2C75822900EA1ECC /* Canchas.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2D68C2BC2C69B8DC008CD29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DB3314A2C74535C00EA1ECC /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		2DB3314C2C745EB300EA1ECC /* Sede.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sede.storyboard; sourceTree = "<group>"; };
+		2DB3314E2C75822900EA1ECC /* Canchas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Canchas.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,9 @@
 				2DB3314A2C74535C00EA1ECC /* Menu.storyboard */,
 				2D68C2B42C69B8DB008CD29F /* Main.storyboard */,
 				2DB3314C2C745EB300EA1ECC /* Sede.storyboard */,
-				2D68C2B72C69B8DC008CD29F /* Assets.xcassets */,
+				2DB3314E2C75822900EA1ECC /* Canchas.storyboard */,
 				2D68C2B92C69B8DC008CD29F /* LaunchScreen.storyboard */,
+				2D68C2B72C69B8DC008CD29F /* Assets.xcassets */,
 				2D68C2BC2C69B8DC008CD29F /* Info.plist */,
 			);
 			path = "SCS-iOS-Project";
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB3314F2C75822900EA1ECC /* Canchas.storyboard in Resources */,
 				2D68C2BB2C69B8DC008CD29F /* LaunchScreen.storyboard in Resources */,
 				2DB3314D2C745EB300EA1ECC /* Sede.storyboard in Resources */,
 				2D68C2B82C69B8DC008CD29F /* Assets.xcassets in Resources */,
