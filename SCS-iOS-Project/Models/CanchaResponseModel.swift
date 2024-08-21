@@ -19,12 +19,4 @@ struct CanchaResponse {
 }
 
 
-struct CrearCanchaRequest{
-    
-    var fechaReserva: String
-    var horaReserva: Int
-    var canchaId: Int64
-    var observacion: String
-    var importe: Double
-    var clienteId: Int64
-}
+

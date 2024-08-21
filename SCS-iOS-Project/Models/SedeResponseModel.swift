@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct SedeResponseModel {
+    var id: Int64
+    var nombre: String
+    var direccion: String
+    var estado: Bool
+}

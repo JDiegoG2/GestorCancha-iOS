@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct RegisterRequest {
+    var password: String
+    var nroDocumento: String
+    var nombres: String
+    var apellidos: String
+    var telefono: String
+    var email: String
+    var direccion: String
+}

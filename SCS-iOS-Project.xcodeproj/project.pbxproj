@@ -15,6 +15,15 @@
 		2D68C2BB2C69B8DC008CD29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D68C2B92C69B8DC008CD29F /* LaunchScreen.storyboard */; };
 		2DB3314B2C74535C00EA1ECC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3314A2C74535C00EA1ECC /* Menu.storyboard */; };
 		2DB3314D2C745EB300EA1ECC /* Sede.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3314C2C745EB300EA1ECC /* Sede.storyboard */; };
+		FAC665122C7589A700D0A4DE /* AuthResoonseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC665112C7589A700D0A4DE /* AuthResoonseModel.swift */; };
+		FAC665142C758A7E00D0A4DE /* CanchaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC665132C758A7E00D0A4DE /* CanchaResponseModel.swift */; };
+		FAC665162C758D9400D0A4DE /* ReservaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC665152C758D9400D0A4DE /* ReservaResponseModel.swift */; };
+		FAC665182C758E8300D0A4DE /* CrearCanchaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC665172C758E8300D0A4DE /* CrearCanchaRequest.swift */; };
+		FAC6651A2C758F6500D0A4DE /* CrearReservaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC665192C758F6500D0A4DE /* CrearReservaRequest.swift */; };
+		FAC6651C2C758F8D00D0A4DE /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6651B2C758F8D00D0A4DE /* LoginRequest.swift */; };
+		FAC6651E2C758FD200D0A4DE /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6651D2C758FD200D0A4DE /* RegisterRequest.swift */; };
+		FAC665202C75927A00D0A4DE /* SedeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6651F2C75927A00D0A4DE /* SedeResponseModel.swift */; };
+		FAC665222C75930E00D0A4DE /* SedeRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC665212C75930E00D0A4DE /* SedeRequestModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		2D68C2BC2C69B8DC008CD29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DB3314A2C74535C00EA1ECC /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		2DB3314C2C745EB300EA1ECC /* Sede.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sede.storyboard; sourceTree = "<group>"; };
+		FAC665112C7589A700D0A4DE /* AuthResoonseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResoonseModel.swift; sourceTree = "<group>"; };
+		FAC665132C758A7E00D0A4DE /* CanchaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchaResponseModel.swift; sourceTree = "<group>"; };
+		FAC665152C758D9400D0A4DE /* ReservaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaResponseModel.swift; sourceTree = "<group>"; };
+		FAC665172C758E8300D0A4DE /* CrearCanchaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCanchaRequest.swift; sourceTree = "<group>"; };
+		FAC665192C758F6500D0A4DE /* CrearReservaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearReservaRequest.swift; sourceTree = "<group>"; };
+		FAC6651B2C758F8D00D0A4DE /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		FAC6651D2C758FD200D0A4DE /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		FAC6651F2C75927A00D0A4DE /* SedeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SedeResponseModel.swift; sourceTree = "<group>"; };
+		FAC665212C75930E00D0A4DE /* SedeRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SedeRequestModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,7 @@
 		2D68C2AD2C69B8DB008CD29F /* SCS-iOS-Project */ = {
 			isa = PBXGroup;
 			children = (
+				FAC6650E2C75831600D0A4DE /* Models */,
 				2D68C2AE2C69B8DB008CD29F /* AppDelegate.swift */,
 				2D68C2B02C69B8DB008CD29F /* SceneDelegate.swift */,
 				2D68C2B22C69B8DB008CD29F /* ViewController.swift */,
@@ -71,6 +90,22 @@
 				2D68C2BC2C69B8DC008CD29F /* Info.plist */,
 			);
 			path = "SCS-iOS-Project";
+			sourceTree = "<group>";
+		};
+		FAC6650E2C75831600D0A4DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAC665112C7589A700D0A4DE /* AuthResoonseModel.swift */,
+				FAC665132C758A7E00D0A4DE /* CanchaResponseModel.swift */,
+				FAC665152C758D9400D0A4DE /* ReservaResponseModel.swift */,
+				FAC665172C758E8300D0A4DE /* CrearCanchaRequest.swift */,
+				FAC665192C758F6500D0A4DE /* CrearReservaRequest.swift */,
+				FAC6651B2C758F8D00D0A4DE /* LoginRequest.swift */,
+				FAC6651D2C758FD200D0A4DE /* RegisterRequest.swift */,
+				FAC6651F2C75927A00D0A4DE /* SedeResponseModel.swift */,
+				FAC665212C75930E00D0A4DE /* SedeRequestModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC665222C75930E00D0A4DE /* SedeRequestModel.swift in Sources */,
+				FAC6651C2C758F8D00D0A4DE /* LoginRequest.swift in Sources */,
 				2D68C2B32C69B8DB008CD29F /* ViewController.swift in Sources */,
+				FAC6651E2C758FD200D0A4DE /* RegisterRequest.swift in Sources */,
 				2D68C2AF2C69B8DB008CD29F /* AppDelegate.swift in Sources */,
+				FAC6651A2C758F6500D0A4DE /* CrearReservaRequest.swift in Sources */,
+				FAC665142C758A7E00D0A4DE /* CanchaResponseModel.swift in Sources */,
+				FAC665122C7589A700D0A4DE /* AuthResoonseModel.swift in Sources */,
 				2D68C2B12C69B8DB008CD29F /* SceneDelegate.swift in Sources */,
+				FAC665162C758D9400D0A4DE /* ReservaResponseModel.swift in Sources */,
+				FAC665202C75927A00D0A4DE /* SedeResponseModel.swift in Sources */,
+				FAC665182C758E8300D0A4DE /* CrearCanchaRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
