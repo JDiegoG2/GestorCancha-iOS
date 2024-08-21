@@ -11,13 +11,13 @@
         <!--Gestor de Canchas Deportivas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SCS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SCS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="atl-2D-hRZ">
-                                <rect key="frame" x="53.666666666666657" y="646" width="286" height="50"/>
+                                <rect key="frame" x="53.666666666666657" y="648" width="286" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vl-M3-djk">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="50"/>
@@ -35,7 +35,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="BzS-YU-1Jl" kind="show" id="gT2-Aa-nxY"/>
+                                            <action selector="loginButtonTappedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNc-v2-AKQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -44,14 +44,14 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Soccer 4" translatesAutoresizingMaskIntoConstraints="NO" id="i9U-PD-ID5">
-                                <rect key="frame" x="46.666666666666657" y="116" width="300" height="260"/>
+                                <rect key="frame" x="46.666666666666657" y="118" width="300" height="260"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="D9R-Ti-OZx"/>
                                     <constraint firstAttribute="width" constant="300" id="hhU-Tv-iSJ"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo de Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7Z-Ze-xSg">
-                                <rect key="frame" x="10" y="416" width="373" height="60"/>
+                                <rect key="frame" x="10" y="418" width="373" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UHb-rq-P5h"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJG-oJ-TvA">
-                                <rect key="frame" x="10" y="516" width="373" height="60"/>
+                                <rect key="frame" x="10" y="518" width="373" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="d6j-su-QwM"/>
                                 </constraints>
@@ -72,17 +72,23 @@
                         <constraints>
                             <constraint firstItem="XJG-oJ-TvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7JY-UR-cfa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n7Z-Ze-xSg" secondAttribute="trailing" constant="10" id="9Er-yG-FPv"/>
-                            <constraint firstItem="i9U-PD-ID5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-180" id="Z39-lS-W4v"/>
+                            <constraint firstItem="i9U-PD-ID5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="YV3-53-PED"/>
                             <constraint firstItem="n7Z-Ze-xSg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cKQ-8d-Jb8"/>
                             <constraint firstItem="n7Z-Ze-xSg" firstAttribute="top" secondItem="i9U-PD-ID5" secondAttribute="bottom" constant="40" id="dLw-xf-VYU"/>
                             <constraint firstItem="atl-2D-hRZ" firstAttribute="top" secondItem="XJG-oJ-TvA" secondAttribute="bottom" constant="70" id="dn2-rW-oKO"/>
                             <constraint firstItem="atl-2D-hRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eYr-4y-QdE"/>
                             <constraint firstItem="XJG-oJ-TvA" firstAttribute="top" secondItem="n7Z-Ze-xSg" secondAttribute="bottom" constant="40" id="glS-H5-FOe"/>
+                            <constraint firstItem="i9U-PD-ID5" firstAttribute="centerX" secondItem="n7Z-Ze-xSg" secondAttribute="centerX" id="tz0-D9-hSG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJG-oJ-TvA" secondAttribute="trailing" constant="10" id="yEl-uf-FLG"/>
-                            <constraint firstItem="i9U-PD-ID5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ysH-MP-c8Y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gestor de Canchas Deportivas" id="inR-cR-i0y"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="n7Z-Ze-xSg" id="9gW-Yx-YbZ"/>
+                        <outlet property="loginButton" destination="Hpb-oW-NPR" id="F9j-Ml-B0x"/>
+                        <outlet property="passwordTextField" destination="XJG-oJ-TvA" id="Jb2-bn-nR8"/>
+                        <outlet property="registerButton" destination="6vl-M3-djk" id="fG1-bY-GNO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

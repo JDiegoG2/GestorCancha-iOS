@@ -11,16 +11,16 @@
         <!--Formulario Cancha-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormularioCanchaViewController" id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="T8a-yM-tca">
-                                <rect key="frame" x="20" y="153" width="353" height="426"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T8a-yM-tca">
+                                <rect key="frame" x="20" y="153" width="353" height="420"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-a6-gRa" userLabel="Tipo Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="70"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-a6-gRa" userLabel="Tipo Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de cancha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1T-nB-by9">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
@@ -32,7 +32,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-W1-PwL">
-                                                <rect key="frame" x="0.0" y="40" width="353" height="30"/>
+                                                <rect key="frame" x="0.0" y="30" width="353" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="YoO-uO-uy0"/>
                                                 </constraints>
@@ -42,7 +42,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Qe-H9-Ohu" userLabel="Teléfono Stack View">
-                                        <rect key="frame" x="0.0" y="96" width="353" height="30"/>
+                                        <rect key="frame" x="0.0" y="90" width="353" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evz-FO-vXc">
                                                 <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="30"/>
@@ -64,7 +64,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZyP-qk-tyV" userLabel="Precio Stack View">
-                                        <rect key="frame" x="0.0" y="152" width="353" height="30"/>
+                                        <rect key="frame" x="0.0" y="150" width="353" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-Qt-eog">
                                                 <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="30"/>
@@ -86,7 +86,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-xn-lvh" userLabel="Sede Stack View">
-                                        <rect key="frame" x="0.0" y="208" width="353" height="30"/>
+                                        <rect key="frame" x="0.0" y="210" width="353" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sede:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjX-HZ-sx8">
                                                 <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
@@ -107,8 +107,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kxt-Jo-JEu" userLabel="Inicio Hora Stack View">
-                                        <rect key="frame" x="0.0" y="264" width="353" height="68"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Kxt-Jo-JEu" userLabel="Inicio Hora Stack View">
+                                        <rect key="frame" x="0.0" y="270" width="353" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disponibilidad: Hora de inicio." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-cm-LpP">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
@@ -120,7 +120,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMy-HN-oQ1">
-                                                <rect key="frame" x="0.0" y="38" width="353" height="30"/>
+                                                <rect key="frame" x="0.0" y="30" width="353" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="vEj-ez-1cf"/>
                                                 </constraints>
@@ -129,8 +129,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PYF-DI-17h" userLabel="Fin Hora Stack View">
-                                        <rect key="frame" x="0.0" y="358" width="353" height="68"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PYF-DI-17h" userLabel="Fin Hora Stack View">
+                                        <rect key="frame" x="0.0" y="360" width="353" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disponibilidad: Hora de Cierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocj-mU-kxS">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
@@ -142,7 +142,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnl-mI-fLR">
-                                                <rect key="frame" x="0.0" y="38" width="353" height="30"/>
+                                                <rect key="frame" x="0.0" y="30" width="353" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="3Ho-aL-fn6"/>
                                                 </constraints>
@@ -154,7 +154,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXI-PK-h4j">
-                                <rect key="frame" x="153.66666666666666" y="659" width="85.666666666666657" height="34.333333333333371"/>
+                                <rect key="frame" x="146.66666666666666" y="653" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BHJ-j4-mav"/>
+                                    <constraint firstAttribute="height" constant="50" id="k5f-FR-JUP"/>
+                                </constraints>
                                 <color key="tintColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
@@ -171,16 +175,7 @@
                             <constraint firstItem="qXI-PK-h4j" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xQW-53-L09"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Formulario Cancha" id="0pI-fC-vpq">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="m22-GD-Lsv">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ifu-bh-bQ9">
-                                <rect key="frame" x="264.33333333333331" y="5" width="112.66666666666669" height="34.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus.square.on.square" catalog="system" title="Agregar"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Formulario Cancha" id="0pI-fC-vpq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,7 +201,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus.square.on.square" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
