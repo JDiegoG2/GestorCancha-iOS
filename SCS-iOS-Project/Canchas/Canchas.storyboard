@@ -11,7 +11,7 @@
         <!--Formulario Cancha-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="FormularioCanchaViewController" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormularioCanchaViewController" id="Y6W-OH-hqX" customClass="FormularioCanchaViewController" customModule="SCS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +148,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="disponibilidadCanchaFinTextField:" destination="AL4-pr-e40" eventType="editingDidEnd" id="opB-H8-Szh"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -162,6 +165,9 @@
                                 <color key="tintColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarCanchaAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KSK-e7-eSY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -176,8 +182,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Formulario Cancha" id="0pI-fC-vpq"/>
+                    <connections>
+                        <outlet property="disponibilidadCanchaFinTextField" destination="xnl-mI-fLR" id="PKB-f3-s98"/>
+                        <outlet property="disponibilidadCanchaInicioTextField" destination="sMy-HN-oQ1" id="qIb-8f-euw"/>
+                        <outlet property="precioCanchaTextField" destination="1zk-sq-EmV" id="OEN-rd-x0f"/>
+                        <outlet property="sedeCanchaTextField" destination="X7f-6P-Jvo" id="Jmy-NG-f5V"/>
+                        <outlet property="telefonoCanchaTextField" destination="iOr-KM-wNz" id="hvI-n4-wMp"/>
+                        <outlet property="tipoCanchaTextField" destination="hDU-W1-PwL" id="JZp-2w-fKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AL4-pr-e40" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="4.9295774647887329"/>
         </scene>

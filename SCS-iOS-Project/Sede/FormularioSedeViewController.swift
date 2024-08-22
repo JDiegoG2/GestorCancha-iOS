@@ -64,7 +64,7 @@ class FormularioSedeViewController: UIViewController, UITextFieldDelegate {
         distritoTextField.text = sede.distrito
     }
     
-    @IBAction func v(_ sender: Any) {
+    @IBAction func guardarFormularioSede(_ sender: Any) {
         let textFields: [(UITextField, String)] = [
             (nombreTextField, "Nombre"),
             (telefonoTextField, "Teléfono"),

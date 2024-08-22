@@ -209,7 +209,7 @@
         <!--Canchas disponibles-->
         <scene sceneID="Fwx-L6-K91">
             <objects>
-                <viewController id="gSM-Ce-0YF" customClass="CanchasViewController" customModule="SCS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CanchasViewController" id="gSM-Ce-0YF" customClass="CanchasViewController" customModule="SCS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TV7-9m-87z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="260" id="r3p-dd-biO" customClass="CanchasTableViewCell" customModule="SCS_iOS_Project" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CanchasTableViewCell" rowHeight="260" id="r3p-dd-biO" customClass="CanchasTableViewCell" customModule="SCS_iOS_Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3p-dd-biO" id="V6E-n2-qrC">
@@ -376,6 +376,14 @@
                                                 <constraint firstItem="8oo-Pi-HAA" firstAttribute="leading" secondItem="V6E-n2-qrC" secondAttribute="leading" constant="10" id="wPK-hl-Gvl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="disponibilidadCanchaFinLabel" destination="NsN-hV-GxK" id="Xev-ub-fgU"/>
+                                            <outlet property="disponibilidadCanchaLabel" destination="wTp-5q-2oB" id="Z6N-l0-n9v"/>
+                                            <outlet property="precioCanchaLabel" destination="nVh-2B-GCl" id="PUL-Ec-oqN"/>
+                                            <outlet property="sedeCanchaLabel" destination="2SG-ge-wRj" id="oyP-Tm-ids"/>
+                                            <outlet property="telefonoCanchaLabel" destination="vsa-S8-lLO" id="N0q-BO-gaX"/>
+                                            <outlet property="tipoCanchaLabel" destination="gBf-f5-i7m" id="9dn-i5-pip"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

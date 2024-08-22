@@ -19,6 +19,12 @@ class SedeViewController: UIViewController {
         fetchSedes()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchSedes() // Recargar la lista de sedes
+    }
+
+    
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
