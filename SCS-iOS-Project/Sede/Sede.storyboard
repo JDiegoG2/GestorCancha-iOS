@@ -11,7 +11,7 @@
         <!--Formulario Sede-->
         <scene sceneID="gsh-uL-fDY">
             <objects>
-                <viewController storyboardIdentifier="AddSedeViewController" id="Dcm-Nj-fIt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSedeViewController" id="Dcm-Nj-fIt" customClass="FormularioSedeViewController" customModule="SCS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H8X-Su-FV6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,6 +162,9 @@
                                 <color key="tintColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarFormularioSedeAction:" destination="Dcm-Nj-fIt" eventType="touchUpInside" id="Wzg-na-YCf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lLV-8e-2ii"/>
@@ -176,6 +179,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Formulario Sede" id="FmR-DM-jWU"/>
+                    <connections>
+                        <outlet property="departamentoTextField" destination="aCj-VQ-2Id" id="pMP-RK-r6F"/>
+                        <outlet property="direccionTextField" destination="25V-Lk-qKz" id="ah9-U5-cYx"/>
+                        <outlet property="distritoTextField" destination="HVl-8b-bqL" id="J5e-pt-cDn"/>
+                        <outlet property="nombreTextField" destination="Nzg-dA-Ov6" id="fYl-r5-kBm"/>
+                        <outlet property="provinciaTextField" destination="0OC-Mp-bkD" id="cJX-NM-CQa"/>
+                        <outlet property="telefonoTextField" destination="2G2-JP-IWt" id="gH1-ep-n2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A12-u0-OQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

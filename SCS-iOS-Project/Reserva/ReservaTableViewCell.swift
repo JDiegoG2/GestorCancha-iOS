@@ -9,6 +9,14 @@ import UIKit
 
 class ReservaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fechaLabel: UILabel!
+    @IBOutlet weak var sedeLabel: UILabel!
+    @IBOutlet weak var canchaLabel: UILabel!
+    @IBOutlet weak var horarioLabel: UILabel!
+    @IBOutlet weak var importeSolesLabel: UILabel!
+    @IBOutlet weak var observacionLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
