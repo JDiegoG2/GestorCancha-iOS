@@ -38,17 +38,21 @@ class CanchaService {
     
     // Método para guardar una cancha
     func guardarCancha(cancha: Cancha, completion: @escaping (Result<CanchaResponse, AFError>) -> Void) {
-        guard let parameters = convertToParameters(cancha) else {
-            let encodingError = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Error al codificar los parámetros."])
-            completion(.failure(AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: encodingError))))
-            return
-        }
-        
-        NetworkManager.shared.session.request("\(apiUrl)/guardar", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getHeaders())
-            .responseDecodable(of: CanchaResponse.self) { response in
-                NetworkManager.shared.handleResponse(response: response, completion: completion)
-            }
-    }
+           let parameters: [String: Any] = [
+               "tipo_cancha": cancha.tipoCancha.rawValue,
+               "numero": cancha.numero,
+               "precio": cancha.precio,
+               "sede_id": cancha.sedeId,
+               "dis_hr_inicio": cancha.disHrInicio,
+               "dis_hr_fin": cancha.disHrFin,
+               "estado": cancha.estado
+           ]
+           
+           NetworkManager.shared.session.request("\(apiUrl)/guardar", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: getHeaders())
+               .responseDecodable(of: CanchaResponse.self) { response in
+                   NetworkManager.shared.handleResponse(response: response, completion: completion)
+               }
+       }
     
     // Método para consultar una cancha por ID
     func consultarCancha(id: Int, completion: @escaping (Result<CanchaResponse, AFError>) -> Void) {

@@ -13,7 +13,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
     var canchaResponse: CanchaResponse?
     
     @IBOutlet weak var tipoCanchaTextField: UITextField!
-    @IBOutlet weak var telefonoCanchaTextField: UITextField!
+    @IBOutlet weak var numeroDeCanchaTextField: UITextField!
     @IBOutlet weak var precioCanchaTextField: UITextField!
     @IBOutlet weak var sedeCanchaTextField: UITextField!
     @IBOutlet weak var disponibilidadCanchaInicioTextField: UITextField!
@@ -24,6 +24,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
     
     private var tipoCancha: [String] = TipoCancha.allCases.map { $0.rawValue }
     private var sedeCancha: [String] = []
+    private var sedes: [Sede] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,8 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         
         tipoCanchaTextField.delegate = self
         sedeCanchaTextField.delegate = self
+        
+        cargarSedesActivas()
     }
     
     func cargarDatosCancha(_ id: Int) {
@@ -50,6 +53,21 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func cargarSedesActivas() {
+        SedeService.shared.listarSedesActivas { [weak self] result in
+            switch result {
+            case .success(let sedes):
+                self?.sedes = sedes
+                self?.sedeCancha = sedes.map { $0.nombre }
+                self?.sedeCanchaPicker.reloadAllComponents()
+            case .failure(let error):
+                print("Error al cargar las sedes activas: \(error)")
+                self?.showAlert(message: "Ocurrió un error al cargar las sedes activas. Inténtalo nuevamente.")
+            }
+        }
+    }
+    
+    
     func actualizarCamposConDatosDeCancha(_ cancha: CanchaResponse) {
         tipoCanchaTextField.text = cancha.numero
         precioCanchaTextField.text = "\(cancha.precio)"
@@ -58,6 +76,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
     @IBAction func guardarCanchaAction(_ sender: Any) {
         let textFields: [(UITextField, String)] = [
             (tipoCanchaTextField, "Tipo de Cancha"),
+            (numeroDeCanchaTextField, "# Cancha"),
             (precioCanchaTextField, "Precio"),
             (sedeCanchaTextField, "Sede"),
             (disponibilidadCanchaInicioTextField, "Hora de Inicio"),
@@ -72,21 +91,24 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         }
         
         guard let tipoCancha = TipoCancha(rawValue: tipoCanchaTextField.text ?? ""),
+              let numero = numeroDeCanchaTextField.text,
               let precio = Double(precioCanchaTextField.text ?? ""),
-              let sedeId = Int(sedeCanchaTextField.text ?? ""),
               let disHrInicio = Int(disponibilidadCanchaInicioTextField.text ?? ""),
-              let disHrFin = Int(disponibilidadCanchaFinTextField.text ?? "") else {
+              let disHrFin = Int(disponibilidadCanchaFinTextField.text ?? ""),
+              let sedeSeleccionada = sedes.first(where: { $0.nombre == sedeCanchaTextField.text }) else {
             showAlert(message: "Por favor, revisa los campos y vuelve a intentar.")
             return
         }
         
+        let sedeId = sedeSeleccionada.id
+        
         if let canchaExistente = cancha {
             // Editando una cancha existente
-            let canchaActualizar = Cancha(estado: canchaExistente.estado, id: canchaExistente.id, tipoCancha: tipoCancha, numero: "", precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
+            let canchaActualizar = Cancha(estado: canchaExistente.estado, id: canchaExistente.id, tipoCancha: tipoCancha, numero: numero, precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
             
             CanchaService.shared.actualizarCancha(id: canchaActualizar.id, cancha: canchaActualizar) { result in
                 switch result {
-                case .success(let cancha):
+                case .success(_):
                     print("Cancha actualizada")
                     self.showSuccessAlert(message: "Cancha actualizada correctamente.")
                 case .failure(let error):
@@ -96,11 +118,11 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
             }
         } else {
             // Crear una nueva cancha
-            let nuevaCancha = Cancha(estado: true, id: 0, tipoCancha: tipoCancha, numero: "", precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
+            let nuevaCancha = Cancha(estado: true, id: 0, tipoCancha: tipoCancha, numero: numero, precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
             
             CanchaService.shared.guardarCancha(cancha: nuevaCancha) { result in
                 switch result {
-                case .success(let cancha):
+                case .success(_):
                     print("Cancha creada")
                     self.showSuccessAlert(message: "Cancha creada correctamente.")
                 case .failure(let error):
@@ -109,6 +131,59 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+        //        let textFields: [(UITextField, String)] = [
+        //            (tipoCanchaTextField, "Tipo de Cancha"),
+        //            (precioCanchaTextField, "Precio"),
+        //            (sedeCanchaTextField, "Sede"),
+        //            (disponibilidadCanchaInicioTextField, "Hora de Inicio"),
+        //            (disponibilidadCanchaFinTextField, "Hora de Fin")
+        //        ]
+        //
+        //        for (textField, fieldName) in textFields {
+        //            if textField.text?.isEmpty ?? true {
+        //                showAlert(message: "El campo '\(fieldName)' es obligatorio.")
+        //                return
+        //            }
+        //        }
+        //
+        //        guard let tipoCancha = TipoCancha(rawValue: tipoCanchaTextField.text ?? ""),
+        //              let precio = Double(precioCanchaTextField.text ?? ""),
+        //              let sedeId = Int(sedeCanchaTextField.text ?? ""),
+        //              let disHrInicio = Int(disponibilidadCanchaInicioTextField.text ?? ""),
+        //              let disHrFin = Int(disponibilidadCanchaFinTextField.text ?? "") else {
+        //            showAlert(message: "Por favor, revisa los campos y vuelve a intentar.")
+        //            return
+        //        }
+        //
+        //        if let canchaExistente = cancha {
+        //            // Editando una cancha existente
+        //            let canchaActualizar = Cancha(estado: canchaExistente.estado, id: canchaExistente.id, tipoCancha: tipoCancha, numero: "", precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
+        //
+        //            CanchaService.shared.actualizarCancha(id: canchaActualizar.id, cancha: canchaActualizar) { result in
+        //                switch result {
+        //                case .success(let cancha):
+        //                    print("Cancha actualizada")
+        //                    self.showSuccessAlert(message: "Cancha actualizada correctamente.")
+        //                case .failure(let error):
+        //                    print("Error al actualizar la cancha: \(error)")
+        //                    self.showAlert(message: "Ocurrió un error al actualizar la cancha. Inténtalo nuevamente.")
+        //                }
+        //            }
+        //        } else {
+        //            // Crear una nueva cancha
+        //            let nuevaCancha = Cancha(estado: true, id: 0, tipoCancha: tipoCancha, numero: "", precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
+        //
+        //            CanchaService.shared.guardarCancha(cancha: nuevaCancha) { result in
+        //                switch result {
+        //                case .success(let cancha):
+        //                    print("Cancha creada")
+        //                    self.showSuccessAlert(message: "Cancha creada correctamente.")
+        //                case .failure(let error):
+        //                    print("Error al crear la cancha: \(error)")
+        //                    self.showAlert(message: "Ocurrió un error al guardar la cancha. Inténtalo nuevamente.")
+        //                }
+        //            }
+        //        }
     }
     
     
@@ -176,7 +251,7 @@ extension FormularioCanchaViewController: UIPickerViewDelegate, UIPickerViewData
         case sedeCanchaPicker:
             sedeCanchaTextField.text = sedeCancha[row]
             sedeCanchaTextField.resignFirstResponder() // Cierra el picker
-
+            
         default:
             break
         }

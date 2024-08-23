@@ -31,7 +31,7 @@
                                                 <color key="textColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-W1-PwL">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Elije el tipo de Cancha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-W1-PwL">
                                                 <rect key="frame" x="0.0" y="30" width="353" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="YoO-uO-uy0"/>
@@ -44,8 +44,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Qe-H9-Ohu" userLabel="Teléfono Stack View">
                                         <rect key="frame" x="0.0" y="90" width="353" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evz-FO-vXc">
-                                                <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N° Cancha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evz-FO-vXc">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="M7V-ci-E2h"/>
                                                 </constraints>
@@ -53,8 +53,8 @@
                                                 <color key="textColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOr-KM-wNz">
-                                                <rect key="frame" x="95.666666666666657" y="0.0" width="257.33333333333337" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número de Cancha( # Entero)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOr-KM-wNz">
+                                                <rect key="frame" x="111.33333333333336" y="0.0" width="241.66666666666663" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="oXT-CX-CGY"/>
                                                 </constraints>
@@ -75,7 +75,7 @@
                                                 <color key="textColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1zk-sq-EmV">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monto en Soles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1zk-sq-EmV">
                                                 <rect key="frame" x="77.333333333333343" y="0.0" width="275.66666666666663" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="DJB-ZX-gqu"/>
@@ -97,7 +97,7 @@
                                                 <color key="textColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-6P-Jvo">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Elije la Sede de tu preferencia." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-6P-Jvo">
                                                 <rect key="frame" x="67" y="0.0" width="286" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yxF-DN-xyz"/>
@@ -119,7 +119,7 @@
                                                 <color key="textColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMy-HN-oQ1">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hora de apertura de Cancha/ Solo numero entero" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMy-HN-oQ1">
                                                 <rect key="frame" x="0.0" y="30" width="353" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="vEj-ez-1cf"/>
@@ -141,7 +141,7 @@
                                                 <color key="textColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnl-mI-fLR">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hora de cierre de Cancha /Solo numero entero" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnl-mI-fLR">
                                                 <rect key="frame" x="0.0" y="30" width="353" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="3Ho-aL-fn6"/>
@@ -185,9 +185,9 @@
                     <connections>
                         <outlet property="disponibilidadCanchaFinTextField" destination="xnl-mI-fLR" id="PKB-f3-s98"/>
                         <outlet property="disponibilidadCanchaInicioTextField" destination="sMy-HN-oQ1" id="qIb-8f-euw"/>
+                        <outlet property="numeroDeCanchaTextField" destination="iOr-KM-wNz" id="hvI-n4-wMp"/>
                         <outlet property="precioCanchaTextField" destination="1zk-sq-EmV" id="OEN-rd-x0f"/>
                         <outlet property="sedeCanchaTextField" destination="X7f-6P-Jvo" id="Jmy-NG-f5V"/>
-                        <outlet property="telefonoCanchaTextField" destination="iOr-KM-wNz" id="hvI-n4-wMp"/>
                         <outlet property="tipoCanchaTextField" destination="hDU-W1-PwL" id="JZp-2w-fKi"/>
                     </connections>
                 </viewController>
