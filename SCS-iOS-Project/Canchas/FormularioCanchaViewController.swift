@@ -122,7 +122,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
             
             CanchaService.shared.guardarCancha(cancha: nuevaCancha) { result in
                 switch result {
-                case .success(_):
+                case .success(let cancha):
                     print("Cancha creada")
                     self.showSuccessAlert(message: "Cancha creada correctamente.")
                 case .failure(let error):
@@ -131,59 +131,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        //        let textFields: [(UITextField, String)] = [
-        //            (tipoCanchaTextField, "Tipo de Cancha"),
-        //            (precioCanchaTextField, "Precio"),
-        //            (sedeCanchaTextField, "Sede"),
-        //            (disponibilidadCanchaInicioTextField, "Hora de Inicio"),
-        //            (disponibilidadCanchaFinTextField, "Hora de Fin")
-        //        ]
-        //
-        //        for (textField, fieldName) in textFields {
-        //            if textField.text?.isEmpty ?? true {
-        //                showAlert(message: "El campo '\(fieldName)' es obligatorio.")
-        //                return
-        //            }
-        //        }
-        //
-        //        guard let tipoCancha = TipoCancha(rawValue: tipoCanchaTextField.text ?? ""),
-        //              let precio = Double(precioCanchaTextField.text ?? ""),
-        //              let sedeId = Int(sedeCanchaTextField.text ?? ""),
-        //              let disHrInicio = Int(disponibilidadCanchaInicioTextField.text ?? ""),
-        //              let disHrFin = Int(disponibilidadCanchaFinTextField.text ?? "") else {
-        //            showAlert(message: "Por favor, revisa los campos y vuelve a intentar.")
-        //            return
-        //        }
-        //
-        //        if let canchaExistente = cancha {
-        //            // Editando una cancha existente
-        //            let canchaActualizar = Cancha(estado: canchaExistente.estado, id: canchaExistente.id, tipoCancha: tipoCancha, numero: "", precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
-        //
-        //            CanchaService.shared.actualizarCancha(id: canchaActualizar.id, cancha: canchaActualizar) { result in
-        //                switch result {
-        //                case .success(let cancha):
-        //                    print("Cancha actualizada")
-        //                    self.showSuccessAlert(message: "Cancha actualizada correctamente.")
-        //                case .failure(let error):
-        //                    print("Error al actualizar la cancha: \(error)")
-        //                    self.showAlert(message: "Ocurrió un error al actualizar la cancha. Inténtalo nuevamente.")
-        //                }
-        //            }
-        //        } else {
-        //            // Crear una nueva cancha
-        //            let nuevaCancha = Cancha(estado: true, id: 0, tipoCancha: tipoCancha, numero: "", precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
-        //
-        //            CanchaService.shared.guardarCancha(cancha: nuevaCancha) { result in
-        //                switch result {
-        //                case .success(let cancha):
-        //                    print("Cancha creada")
-        //                    self.showSuccessAlert(message: "Cancha creada correctamente.")
-        //                case .failure(let error):
-        //                    print("Error al crear la cancha: \(error)")
-        //                    self.showAlert(message: "Ocurrió un error al guardar la cancha. Inténtalo nuevamente.")
-        //                }
-        //            }
-        //        }
+        
     }
     
     
@@ -246,11 +194,11 @@ extension FormularioCanchaViewController: UIPickerViewDelegate, UIPickerViewData
         switch pickerView {
         case tipoCanchaPicker:
             tipoCanchaTextField.text = tipoCancha[row]
-            tipoCanchaTextField.resignFirstResponder() // Cierra el picker
+            tipoCanchaTextField.resignFirstResponder()
             
         case sedeCanchaPicker:
             sedeCanchaTextField.text = sedeCancha[row]
-            sedeCanchaTextField.resignFirstResponder() // Cierra el picker
+            sedeCanchaTextField.resignFirstResponder()
             
         default:
             break
