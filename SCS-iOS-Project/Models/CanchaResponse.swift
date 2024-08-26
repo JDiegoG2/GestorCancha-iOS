@@ -10,7 +10,7 @@ import Foundation
 struct CanchaResponse: Codable {
     var estado: Bool
     var id: Int
-    var tipoCancha: TipoCancha // Usamos el enum aquí
+    var tipoCancha: TipoCancha
     var numero: String
     var precio: Double
     var sedeId: Int
@@ -20,7 +20,7 @@ struct CanchaResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case estado
         case id
-        case tipoCancha = "tipo_cancha" // Se codifica/decodifica como String
+        case tipoCancha = "tipo_cancha"
         case numero
         case precio
         case sedeId = "sede_id"

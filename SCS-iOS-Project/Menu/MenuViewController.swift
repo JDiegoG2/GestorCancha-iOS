@@ -12,16 +12,16 @@ class MenuViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.delegate = self 
+        self.delegate = self
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        
         if let sedeViewController = viewController as? SedeViewController {
-            sedeViewController.fetchSedes() // Trigger refresh when the Sede tab is selected
+            sedeViewController.fetchSedes()
         } else if let canchasViewController = viewController as? CanchasViewController {
-            canchasViewController.fetchSedes() // Refresh the Sedes data
-            canchasViewController.fetchCanchas() // Trigger refresh when the Canchas tab is selected
+            canchasViewController.fetchSedes()
+            canchasViewController.fetchCanchas()
         }
     }
-    
 }
