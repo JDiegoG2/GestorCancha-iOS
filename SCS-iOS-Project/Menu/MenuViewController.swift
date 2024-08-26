@@ -7,23 +7,21 @@
 
 import UIKit
 
-class MenuViewController: UITabBarController {
-
+class MenuViewController: UITabBarController, UITabBarControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.delegate = self 
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let sedeViewController = viewController as? SedeViewController {
+            sedeViewController.fetchSedes() // Trigger refresh when the Sede tab is selected
+        } else if let canchasViewController = viewController as? CanchasViewController {
+            canchasViewController.fetchSedes() // Refresh the Sedes data
+            canchasViewController.fetchCanchas() // Trigger refresh when the Canchas tab is selected
+        }
     }
-    */
-
+    
 }

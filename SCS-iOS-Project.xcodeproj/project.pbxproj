@@ -41,10 +41,11 @@
 		2DC03D6C2C76F41E00A3FB61 /* Ubigeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D6B2C76F41E00A3FB61 /* Ubigeo.swift */; };
 		2DC03D702C77AF6B00A3FB61 /* TipoCanchaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D6F2C77AF6B00A3FB61 /* TipoCanchaService.swift */; };
 		2DC03D722C77B13E00A3FB61 /* TipoCancha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D712C77B13E00A3FB61 /* TipoCancha.swift */; };
-		2DC03D742C77B1F900A3FB61 /* Cancha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D732C77B1F900A3FB61 /* Cancha.swift */; };
+		2DC03D742C77B1F900A3FB61 /* CanchaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D732C77B1F900A3FB61 /* CanchaResponse.swift */; };
 		2DC03D762C77B26E00A3FB61 /* CanchaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D752C77B26E00A3FB61 /* CanchaService.swift */; };
-		2DC03D782C77B4B400A3FB61 /* CanchaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D772C77B4B400A3FB61 /* CanchaResponse.swift */; };
+		2DC03D782C77B4B400A3FB61 /* CanchaErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D772C77B4B400A3FB61 /* CanchaErrorResponse.swift */; };
 		2DC03D7A2C77C45100A3FB61 /* FormularioCanchaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D792C77C45100A3FB61 /* FormularioCanchaViewController.swift */; };
+		2DC03D7C2C7C05E300A3FB61 /* CanchaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D7B2C7C05E300A3FB61 /* CanchaRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,10 +83,11 @@
 		2DC03D6B2C76F41E00A3FB61 /* Ubigeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ubigeo.swift; sourceTree = "<group>"; };
 		2DC03D6F2C77AF6B00A3FB61 /* TipoCanchaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoCanchaService.swift; sourceTree = "<group>"; };
 		2DC03D712C77B13E00A3FB61 /* TipoCancha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoCancha.swift; sourceTree = "<group>"; };
-		2DC03D732C77B1F900A3FB61 /* Cancha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancha.swift; sourceTree = "<group>"; };
+		2DC03D732C77B1F900A3FB61 /* CanchaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchaResponse.swift; sourceTree = "<group>"; };
 		2DC03D752C77B26E00A3FB61 /* CanchaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchaService.swift; sourceTree = "<group>"; };
-		2DC03D772C77B4B400A3FB61 /* CanchaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchaResponse.swift; sourceTree = "<group>"; };
+		2DC03D772C77B4B400A3FB61 /* CanchaErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchaErrorResponse.swift; sourceTree = "<group>"; };
 		2DC03D792C77C45100A3FB61 /* FormularioCanchaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioCanchaViewController.swift; sourceTree = "<group>"; };
+		2DC03D7B2C7C05E300A3FB61 /* CanchaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanchaRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +180,9 @@
 				2DC03D652C76EEFC00A3FB61 /* Sede.swift */,
 				2DC03D6B2C76F41E00A3FB61 /* Ubigeo.swift */,
 				2DC03D712C77B13E00A3FB61 /* TipoCancha.swift */,
-				2DC03D732C77B1F900A3FB61 /* Cancha.swift */,
-				2DC03D772C77B4B400A3FB61 /* CanchaResponse.swift */,
+				2DC03D732C77B1F900A3FB61 /* CanchaResponse.swift */,
+				2DC03D772C77B4B400A3FB61 /* CanchaErrorResponse.swift */,
+				2DC03D7B2C7C05E300A3FB61 /* CanchaRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DC03D782C77B4B400A3FB61 /* CanchaResponse.swift in Sources */,
+				2DC03D782C77B4B400A3FB61 /* CanchaErrorResponse.swift in Sources */,
 				2DB3315B2C763BFB00EA1ECC /* Register.swift in Sources */,
 				2DB331592C763BDE00EA1ECC /* ErrorResponse.swift in Sources */,
 				2DB3316F2C7691AD00EA1ECC /* LoginResponse.swift in Sources */,
@@ -311,10 +314,11 @@
 				2DB331642C763F3C00EA1ECC /* AuthService.swift in Sources */,
 				2DC03D682C76EF2D00A3FB61 /* SedeService.swift in Sources */,
 				2DC03D5E2C76A07300A3FB61 /* SedeTableViewCell.swift in Sources */,
+				2DC03D7C2C7C05E300A3FB61 /* CanchaRequest.swift in Sources */,
 				2DB3316D2C765A3C00EA1ECC /* MenuViewController.swift in Sources */,
 				2DC03D6A2C76F2F400A3FB61 /* UbigeoService.swift in Sources */,
 				2DC03D582C769FD200A3FB61 /* ReservaViewController.swift in Sources */,
-				2DC03D742C77B1F900A3FB61 /* Cancha.swift in Sources */,
+				2DC03D742C77B1F900A3FB61 /* CanchaResponse.swift in Sources */,
 				2DC03D762C77B26E00A3FB61 /* CanchaService.swift in Sources */,
 				2DC03D5A2C769FDF00A3FB61 /* SedeViewController.swift in Sources */,
 				2DC03D622C76A0BB00A3FB61 /* ReservaTableViewCell.swift in Sources */,

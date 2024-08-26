@@ -9,7 +9,6 @@ import UIKit
 
 class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
     
-    var cancha: Cancha?
     var canchaResponse: CanchaResponse?
     
     @IBOutlet weak var tipoCanchaTextField: UITextField!
@@ -30,7 +29,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupPickers()
         
-        if let canchaExistente = cancha {
+        if let canchaExistente = canchaResponse {
             cargarDatosCancha(canchaExistente.id)
         }
         
@@ -53,6 +52,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     func cargarSedesActivas() {
         SedeService.shared.listarSedesActivas { [weak self] result in
             switch result {
@@ -67,9 +67,9 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     func actualizarCamposConDatosDeCancha(_ cancha: CanchaResponse) {
-        tipoCanchaTextField.text = cancha.numero
+        tipoCanchaTextField.text = cancha.tipoCancha.rawValue
+        numeroDeCanchaTextField.text = cancha.numero
         precioCanchaTextField.text = "\(cancha.precio)"
     }
     
@@ -102,14 +102,21 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
         
         let sedeId = sedeSeleccionada.id
         
-        if let canchaExistente = cancha {
-            // Editando una cancha existente
-            let canchaActualizar = Cancha(estado: canchaExistente.estado, id: canchaExistente.id, tipoCancha: tipoCancha, numero: numero, precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
-            
-            CanchaService.shared.actualizarCancha(id: canchaActualizar.id, cancha: canchaActualizar) { result in
+        let canchaRequest = CrearCanchaRequest(
+            tipoCancha: tipoCancha,
+            numero: numero,
+            precio: precio,
+            sedeId: sedeId,
+            disHrInicio: disHrInicio,
+            disHrFin: disHrFin,
+            estado: true // Estado por defecto, siempre true al crear
+        )
+        
+        if let canchaExistente = canchaResponse {
+            // Editar una cancha existente
+            CanchaService.shared.actualizarCancha(id: canchaExistente.id, cancha: canchaRequest) { result in
                 switch result {
                 case .success(_):
-                    print("Cancha actualizada")
                     self.showSuccessAlert(message: "Cancha actualizada correctamente.")
                 case .failure(let error):
                     print("Error al actualizar la cancha: \(error)")
@@ -118,12 +125,9 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
             }
         } else {
             // Crear una nueva cancha
-            let nuevaCancha = Cancha(estado: true, id: 0, tipoCancha: tipoCancha, numero: numero, precio: precio, sedeId: sedeId, disHrInicio: disHrInicio, disHrFin: disHrFin)
-            
-            CanchaService.shared.guardarCancha(cancha: nuevaCancha) { result in
+            CanchaService.shared.guardarCancha(cancha: canchaRequest) { result in
                 switch result {
-                case .success(let cancha):
-                    print("Cancha creada")
+                case .success(_):
                     self.showSuccessAlert(message: "Cancha creada correctamente.")
                 case .failure(let error):
                     print("Error al crear la cancha: \(error)")
@@ -131,7 +135,7 @@ class FormularioCanchaViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        
+
     }
     
     
