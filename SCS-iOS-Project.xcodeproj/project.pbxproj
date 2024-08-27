@@ -49,6 +49,9 @@
 		2DC03D7E2C7D275300A3FB61 /* ReservaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D7D2C7D275300A3FB61 /* ReservaResponse.swift */; };
 		2DC03D802C7D287E00A3FB61 /* CrearReservaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D7F2C7D287E00A3FB61 /* CrearReservaRequest.swift */; };
 		2DC03D822C7D30CC00A3FB61 /* ReservaSede.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D812C7D30CC00A3FB61 /* ReservaSede.swift */; };
+		2DC03D852C7D5DDE00A3FB61 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC03D842C7D5DDE00A3FB61 /* Register.storyboard */; };
+		2DC03D872C7D5DF000A3FB61 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D862C7D5DF000A3FB61 /* RegisterViewController.swift */; };
+		2DC03D8B2C7D70FC00A3FB61 /* FormularioReservaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03D8A2C7D70FC00A3FB61 /* FormularioReservaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,9 @@
 		2DC03D7D2C7D275300A3FB61 /* ReservaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaResponse.swift; sourceTree = "<group>"; };
 		2DC03D7F2C7D287E00A3FB61 /* CrearReservaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearReservaRequest.swift; sourceTree = "<group>"; };
 		2DC03D812C7D30CC00A3FB61 /* ReservaSede.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaSede.swift; sourceTree = "<group>"; };
+		2DC03D842C7D5DDE00A3FB61 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		2DC03D862C7D5DF000A3FB61 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2DC03D8A2C7D70FC00A3FB61 /* FormularioReservaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioReservaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB3315C2C763C8700EA1ECC /* Constants.swift */,
+				2DC03D832C7D5D3200A3FB61 /* Register */,
 				2DB331552C7637EF00EA1ECC /* Login */,
 				2DB331502C7636F900EA1ECC /* Menu */,
 				2DB331512C76374600EA1ECC /* Sede */,
@@ -225,8 +232,18 @@
 				2DC03D532C769F6F00A3FB61 /* Reserva.storyboard */,
 				2DC03D572C769FD200A3FB61 /* ReservaViewController.swift */,
 				2DC03D612C76A0BB00A3FB61 /* ReservaTableViewCell.swift */,
+				2DC03D8A2C7D70FC00A3FB61 /* FormularioReservaViewController.swift */,
 			);
 			path = Reserva;
+			sourceTree = "<group>";
+		};
+		2DC03D832C7D5D3200A3FB61 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2DC03D842C7D5DDE00A3FB61 /* Register.storyboard */,
+				2DC03D862C7D5DF000A3FB61 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +319,7 @@
 				2D68C2B62C69B8DB008CD29F /* Main.storyboard in Resources */,
 				2DB3314B2C74535C00EA1ECC /* Menu.storyboard in Resources */,
 				2DC03D542C769F6F00A3FB61 /* Reserva.storyboard in Resources */,
+				2DC03D852C7D5DDE00A3FB61 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +332,7 @@
 			files = (
 				2DC03D782C77B4B400A3FB61 /* CanchaErrorResponse.swift in Sources */,
 				2DB3315B2C763BFB00EA1ECC /* Register.swift in Sources */,
+				2DC03D8B2C7D70FC00A3FB61 /* FormularioReservaViewController.swift in Sources */,
 				2DC03D802C7D287E00A3FB61 /* CrearReservaRequest.swift in Sources */,
 				2DB331592C763BDE00EA1ECC /* ErrorResponse.swift in Sources */,
 				2DB3316F2C7691AD00EA1ECC /* LoginResponse.swift in Sources */,
@@ -325,6 +344,7 @@
 				2DB331642C763F3C00EA1ECC /* AuthService.swift in Sources */,
 				2DC03D682C76EF2D00A3FB61 /* SedeService.swift in Sources */,
 				2DC03D5E2C76A07300A3FB61 /* SedeTableViewCell.swift in Sources */,
+				2DC03D872C7D5DF000A3FB61 /* RegisterViewController.swift in Sources */,
 				2DC03D7C2C7C05E300A3FB61 /* CrearCanchaRequest.swift in Sources */,
 				2DB3316D2C765A3C00EA1ECC /* MenuViewController.swift in Sources */,
 				2DC03D6A2C76F2F400A3FB61 /* UbigeoService.swift in Sources */,

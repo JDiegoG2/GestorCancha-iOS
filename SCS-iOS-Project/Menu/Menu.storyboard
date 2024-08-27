@@ -190,18 +190,26 @@
                                 <buttonConfiguration key="configuration" style="plain" image="plus.app.fill" catalog="system" title="Agregar">
                                     <color key="baseForegroundColor" red="0.13245655789999999" green="0.58265544459999996" blue="0.26165952770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="vsz-Gs-TEu" kind="show" id="DMc-wS-iBo"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="JUY-Fi-m2A" id="bcm-zM-PHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3v5-oC-Cvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5638.9312977099235" y="1029.5774647887324"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--ReservaViewController-->
         <scene sceneID="cgY-SS-ZyT">
             <objects>
-                <viewControllerPlaceholder id="vsz-Gs-TEu" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Reserva" referencedIdentifier="ReservaViewController" id="vsz-Gs-TEu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pL0-Qh-X8X"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0u-6W-9CE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6529" y="906"/>

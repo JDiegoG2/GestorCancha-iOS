@@ -26,6 +26,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Registrate">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BzS-YU-1Jl" kind="show" id="axe-gA-mFx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpb-oW-NPR">
                                         <rect key="frame" x="173" y="0.0" width="113" height="50"/>
@@ -94,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1002.2900763358779" y="-2.1126760563380285"/>
         </scene>
-        <!--MenuViewController-->
+        <!--RegisterViewController-->
         <scene sceneID="4Hj-El-Uyu">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MenuViewController" storyboardName="Menu" referencedIdentifier="MenuViewController" id="BzS-YU-1Jl" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="RegisterViewController" storyboardName="Register" referencedIdentifier="RegisterViewController" id="BzS-YU-1Jl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Dce-qy-xwG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39G-wl-cii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
